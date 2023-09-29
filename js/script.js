@@ -7,16 +7,15 @@ createApp({
       tasks: [
         'cibo hope',
         'compiti',
-        'chiamare vicio',
-        'chiamare vicio',
-        'chiamare vicio',
+        'giocare alla play'
       ],
       newTask: []
     }
   },
   methods:{
     addNewTask (){
-      this.tasks.unshift(this.newTask)
+      this.tasks.unshift(this.newTask);
+      this.newTask= ''
     }
 
   },
