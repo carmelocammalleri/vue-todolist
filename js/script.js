@@ -10,13 +10,18 @@ createApp({
         'giocare alla play'
       ],
       newTask: [],
-      counter: 0
+      isError: false
     }
   },
   methods:{
     addNewTask (){
-      this.tasks.unshift(this.newTask);
-      this.newTask= ''
+      if(this.newTask.length <5){
+        this.isError=true
+      } else {
+        this.tasks.unshift(this.newTask);
+        this.newTask= ''
+        this.isError=false
+      }
     }
 
   },
