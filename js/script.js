@@ -6,10 +6,10 @@ createApp({
     return {
       tasks: [
         'cibo hope',
-        'cibo hope',
-        'cibo hope'
+        'compiti',
+        'chiamare vicio'
       ],
-      counter: 0
+      
     }
   }
 }).mount('#app')

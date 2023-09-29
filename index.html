@@ -38,8 +38,9 @@
           <ul class="p-0 m-0">
             <li
             v-for="(task, index) in tasks"
+            v-if=""
             class="d-flex align-items-center justify-content-between p-2 "><span>
-              {{tasks[counter]}}
+              {{tasks[index]}}
             </span><i class="fa-solid fa-xmark"></i></li>            
           </ul>
         </div>
