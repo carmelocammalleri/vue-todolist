@@ -1,3 +1,14 @@
-.logoText{
-  font-size: 2rem;
+.listTask{
+  background-color: rgb(221, 221, 221);
+}
+.listTask li {
+  list-style: none;
+}
+
+.listTask li:hover {
+  background-color: rgb(164, 164, 164);
+}
+
+.listTask li .fa-solid {
+  cursor: pointer;
 }
