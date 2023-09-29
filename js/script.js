@@ -10,7 +10,8 @@ createApp({
         'giocare alla play'
       ],
       newTask: [],
-      isError: false
+      isError: false,
+      isActive: false
     }
   },
   methods:{
@@ -25,10 +26,18 @@ createApp({
     },
     removeTask(index){
       this.tasks.splice(index,1)
-
+      console.log(isDone);
+    },
+    taskDone() {
+      if (!this.isActive) {
+        this.isActive = true;
+      } else {
+        this.isActive = false;
+      }
+      console.log(this.isActive);
     }
-
   },
-  mounted () {    
+  mounted (){
+
   }
 }).mount('#app')

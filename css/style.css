@@ -12,3 +12,7 @@
 .listTask li .fa-solid {
   cursor: pointer;
 }
+
+.lineThr {
+  text-decoration: line-through;
+}

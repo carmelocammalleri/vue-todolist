@@ -45,18 +45,26 @@
     <main>
       <section class="row d-flex justify-content-center m-3 ">
         <div class="col-6 card listTask p-0">
-          <ul class="p-0 m-0">
+          <ul
+           v-if="tasks.length > 0"
+           class="p-0 m-0">
             <li
-            v-for="(task, index) in tasks"
-            class="d-flex align-items-center justify-content-between p-2 ">
-              <span>
+              v-for="(task, index) in tasks"
+              class="d-flex align-items-center justify-content-between p-2"
+              >
+              <div 
+              :class="isActive ===true ? 'lineThr' : ''"
+              @click="taskDone ">
                 {{task}}
-              </span>
+              </div>
               <i
-              @click="removeTask(index)"
-              class="fa-solid fa-xmark"></i>
+                @click="removeTask(index)"
+                class="fa-solid fa-xmark"></i>
             </li>           
           </ul>
+          <h4 
+            v-else
+            class="p-2 "> Non ci sono tasks</h4>
         </div>
 
       </section>
