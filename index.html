@@ -23,12 +23,17 @@
   
   <div id="app">
     <header>
-      <div id="logo"    class="w-100 d-flex align-items-center justify-content-center  m-3 ">
+      <div id="logo"
+      class="w-100 d-flex align-items-center justify-content-center  m-3 ">
           <img src="./Logo.png" alt="logo">
           <span class="p-3 fs-1 ">Boolean</span>
         </div>
-        <nav class="d-flex justify-content-center ">
-          <input class="m-2" type="text" placeholder="Add Task">
+        <nav 
+        class="d-flex justify-content-center">
+          <input 
+          v-model="newTask"
+          @keyup.enter="addNewTask()"
+          class="m-2" type="text" placeholder="Add Task">
           <button class="btn   btn-primary m-2 ">Aggiungi</button>
         </nav>
     </header>
@@ -38,9 +43,8 @@
           <ul class="p-0 m-0">
             <li
             v-for="(task, index) in tasks"
-            v-if=""
             class="d-flex align-items-center justify-content-between p-2 "><span>
-              {{tasks[index]}}
+              {{task}}
             </span><i class="fa-solid fa-xmark"></i></li>            
           </ul>
         </div>
