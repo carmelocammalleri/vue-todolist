@@ -9,7 +9,8 @@ createApp({
         'compiti',
         'giocare alla play'
       ],
-      newTask: []
+      newTask: [],
+      counter: 0
     }
   },
   methods:{

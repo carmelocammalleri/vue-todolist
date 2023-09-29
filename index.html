@@ -31,10 +31,12 @@
         <nav 
         class="d-flex justify-content-center">
           <input 
-          v-model="newTask"
+          v-model.trim="newTask"
           @keyup.enter="addNewTask()"
           class="m-2" type="text" placeholder="Add Task">
-          <button class="btn   btn-primary m-2 ">Aggiungi</button>
+          <button
+          @click="addNewTask()"
+          class="btn   btn-primary m-2  ">Aggiungi</button>
         </nav>
     </header>
     <main>
@@ -45,7 +47,8 @@
             v-for="(task, index) in tasks"
             class="d-flex align-items-center justify-content-between p-2 "><span>
               {{task}}
-            </span><i class="fa-solid fa-xmark"></i></li>            
+            </span><i
+            class="fa-solid fa-xmark"></i></li>            
           </ul>
         </div>
 
