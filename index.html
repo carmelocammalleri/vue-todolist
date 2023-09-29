@@ -48,10 +48,14 @@
           <ul class="p-0 m-0">
             <li
             v-for="(task, index) in tasks"
-            class="d-flex align-items-center justify-content-between p-2 "><span>
-              {{task}}
-            </span><i
-            class="fa-solid fa-xmark"></i></li>           
+            class="d-flex align-items-center justify-content-between p-2 ">
+              <span>
+                {{task}}
+              </span>
+              <i
+              @click="removeTask(index)"
+              class="fa-solid fa-xmark"></i>
+            </li>           
           </ul>
         </div>
 

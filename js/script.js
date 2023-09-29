@@ -22,6 +22,10 @@ createApp({
         this.newTask= ''
         this.isError=false
       }
+    },
+    removeTask(index){
+      this.tasks.splice(index,1)
+
     }
 
   },
